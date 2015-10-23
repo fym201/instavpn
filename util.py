@@ -86,13 +86,13 @@ def install_node():
 
     if not run_command("nvm --version"):
         logger.debug("Install nvm")
-        if not run_command("curl https://raw.githubusercontent.com/creationix/nvm/v0.21.0/install.sh | bash"):
+        if not run_command("curl https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash"):
             return False
         run_command("source ~/.nvm/nvm.sh")
 
-    if not run_command("nvm use 0.10.33"):
+    if not run_command("nvm use 0.12"):
         logger.debug('Install node.js')
-        if not run_command("nvm install 0.10"):
+        if not run_command("nvm install 0.12"):
             return False
 
     return True
